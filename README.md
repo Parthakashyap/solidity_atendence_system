@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Attendance Verification System
 
-## Getting Started
+## Vision
 
-First, run the development server:
+The Attendance Verification System is designed to create a decentralized and transparent platform for verifying and rewarding student attendance using blockchain technology. By leveraging smart contracts, this system ensures that attendance records are immutable and tamper-proof, while students are rewarded with tokens for each attendance they mark. This encourages consistent attendance and provides a verifiable record of participation.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Demos
+
+![image](https://github.com/user-attachments/assets/cf0e5cd6-1816-4b09-9b17-a3bd2b08898c)
+
+![image](https://github.com/user-attachments/assets/587492c0-bcd5-4404-85be-88096f6031df)
+
+
+
+## Flowchart
+
+```plaintext
++-------------------------------------------+
+|                                           |
+|            Instructor (Contract Deployer) |
+|                                           |
++--------------------------+----------------+
+                           |
+                           v
+           +---------------------------------+
+           |                                 |
+           |     Deploy Attendance Contract  |
+           |                                 |
+           +---------------------------------+
+                           |
+                           v
++--------------------------+----------------+
+|                                           |
+|  Students                                  |
+|                                           |
++--------------------------+----------------+
+                           |
+                           v
+           +---------------------------------+
+           |                                 |
+           |    Instructor Marks Attendance  |
+           |       for a Student             |
+           |                                 |
+           +---------------------------------+
+                           |
+                           v
++--------------------------+----------------+
+|                                           |
+|   Tokens are Rewarded to the Student      |
+|                                           |
++--------------------------+----------------+
+                           |
+                           v
+           +---------------------------------+
+           |                                 |
+           |   Student Checks Token Balance  |
+           |                                 |
+           +---------------------------------+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contract Address
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The smart contract is deployed on the Ethereum test network at the following address:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+`0x77776AEfB72ac5A3edCbbf6Ce50b7120B7f0203D`
 
-## Learn More
+Please replace this placeholder with the actual contract address once deployed.
 
-To learn more about Next.js, take a look at the following resources:
+## Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Instructor-Only Access:** Only the instructor (contract deployer) can mark attendance and reward tokens.
+- **Token Rewards:** Students are rewarded with 1 token for each attendance marked by the instructor.
+- **Transparency:** Attendance records and token balances are stored on the blockchain, ensuring transparency and immutability.
+- **Public Token Balance Check:** Students can check their token balance anytime using the `getTokenBalance` function.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Future Scope
 
-## Deploy on Vercel
+- **Multiple Instructors:** Extend the contract to allow multiple instructors with different permissions to mark attendance.
+- **Token Economy:** Implement a system where students can redeem tokens for rewards or privileges within the institution.
+- **Automated Attendance:** Integrate with IoT devices or mobile apps to automatically mark attendance.
+- **Off-Chain Data Storage:** Incorporate IPFS or similar technologies to store additional off-chain data linked to attendance records.
+- **Student Enrollment:** Implement a mechanism for student registration and enrollment in the contract.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contact Information
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+For any inquiries, issues, or contributions, please contact:
+
+**Partha Pratim Kashyap**  
+Email: parthakashyal@gmail.com  
+LinkedIn: [Partha Pratim Kashyap](https://www.linkedin.com/in/partha-pratim-kashyap)  
+
+
+---
+
+**Note:** This project is currently in its initial stage and is intended for educational purposes. Further enhancements and deployments are planned as part of the project's future roadmap.
